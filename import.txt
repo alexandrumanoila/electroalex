@@ -1,0 +1,1244 @@
+import { Phone, Mail, MapPin } from "lucide-react"
+
+export default function ContactPage() {
+  return (
+    <div className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold text-blue-800 mb-8 text-center">Contact</h1>
+
+        <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="p-8">
+              <h2 className="text-2xl font-semibold text-blue-700 mb-6">Informații de contact</h2>
+
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <Phone className="h-6 w-6 text-blue-600 mr-4 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-lg">Telefon</h3>
+                    <p className="text-gray-600">0770 670 185 / 0744 506 331</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <Mail className="h-6 w-6 text-blue-600 mr-4 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-lg">Email</h3>
+                    <p className="text-gray-600">electroalex@yahoo.com</p>
+                    <p className="text-gray-600">manoilaalex1@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <MapPin className="h-6 w-6 text-blue-600 mr-4 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-lg">Adresă</h3>
+                    <p className="text-gray-600 mb-3">Electroalex, DN2K, Arbore 727015, Județul Suceava</p>
+                    <div className="flex space-x-3">
+                      <a
+                        href="https://www.google.com/maps/search/?api=1&query=Electroalex+Arbore+Suceava"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                      >
+                        Google Maps
+                      </a>
+                      <a
+                        href="https://www.waze.com/ul?ll=47.7252%2C25.9244&navigate=yes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                      >
+                        Waze
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <h3 className="font-medium text-lg mb-3">Program de lucru</h3>
+                <div className="space-y-2 text-gray-600">
+                  <div className="flex justify-between">
+                    <span>Luni - Vineri:</span>
+                    <span>08:00 - 17:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sâmbătă:</span>
+                    <span>09:00 - 14:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Duminică:</span>
+                    <span>Închis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8 bg-gray-50">
+              <h2 className="text-2xl font-semibold text-blue-700 mb-6">Trimite-ne un mesaj</h2>
+
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Nume
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Numele dvs."
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Adresa dvs. de email"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Telefon
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Numărul dvs. de telefon"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Mesaj
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={5}
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Cum vă putem ajuta?"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium"
+                >
+                  Trimite mesajul
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 max-w-5xl mx-auto">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-6">Locația noastră</h2>
+          <div className="rounded-lg overflow-hidden shadow-md h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21513.651846905!2d25.91!3d47.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4734fc0a0c0e029d%3A0x7f3e0b4d2f4e4b0!2sArbore%2C%20Romania!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+import { Clock, Award, CheckCircle } from "lucide-react"
+
+export default function DespreNoiPage() {
+  return (
+    <div className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold text-blue-800 mb-8 text-center">Despre noi</h1>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-8">
+              <h2 className="text-2xl font-semibold text-blue-700 mb-6">
+                Experiență și profesionalism în instalații electrice
+              </h2>
+
+              <p className="text-gray-700 mb-4">
+                ElectroAlex Arbore este o companie specializată în instalații și branșamente electrice, oferind servicii
+                complete pentru clienți rezidențiali și comerciali din județul Suceava.
+              </p>
+
+              <p className="text-gray-700 mb-4">
+                Cu o experiență vastă în domeniu, echipa noastră de electricieni calificați asigură lucrări de înaltă
+                calitate, respectând toate normele și standardele în vigoare.
+              </p>
+
+              <p className="text-gray-700 mb-6">
+                Pe lângă serviciile de instalații electrice, dispunem și de un magazin fizic în centrul comunei Arbore,
+                unde puteți găsi o gamă variată de produse electrice și accesorii.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <div className="flex items-center mb-4">
+                    <Clock className="h-10 w-10 text-blue-600 mr-4" />
+                    <h3 className="text-xl font-semibold text-blue-700">Peste 30 de ani de experiență</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    Cu o activitate de peste trei decenii în domeniul instalațiilor electrice, am acumulat expertiza
+                    necesară pentru a oferi soluții optime pentru orice tip de proiect.
+                  </p>
+                </div>
+
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <div className="flex items-center mb-4">
+                    <Award className="h-10 w-10 text-blue-600 mr-4" />
+                    <h3 className="text-xl font-semibold text-blue-700">Autorizați ANRE</h3>
+                  </div>
+                  <p className="text-gray-600">
+                    Suntem autorizați de Autoritatea Națională de Reglementare în Domeniul Energiei, ceea ce garantează
+                    calitatea și siguranța lucrărilor noastre.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-8">
+              <h2 className="text-2xl font-semibold text-blue-700 mb-6">De ce să alegeți ElectroAlex?</h2>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <div className="flex items-start mb-4">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-700">Calitate garantată</h3>
+                      <p className="text-gray-600">
+                        Toate lucrările noastre respectă cele mai înalte standarde de calitate și siguranță.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start mb-4">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-700">Echipă profesionistă</h3>
+                      <p className="text-gray-600">
+                        Electricienii noștri sunt calificați și au experiență vastă în domeniu.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-700">Prețuri competitive</h3>
+                      <p className="text-gray-600">Oferim servicii de calitate la prețuri corecte și transparente.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-start mb-4">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-700">Promptitudine</h3>
+                      <p className="text-gray-600">
+                        Respectăm termenele de execuție și suntem disponibili pentru urgențe.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start mb-4">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-700">Garanție pentru lucrări</h3>
+                      <p className="text-gray-600">
+                        Toate serviciile noastre beneficiază de garanție conform legislației în vigoare.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1" />
+                    <div>
+                      <h3 className="font-semibold text-lg text-blue-700">Consultanță gratuită</h3>
+                      <p className="text-gray-600">
+                        Oferim consultanță tehnică gratuită pentru proiectele dumneavoastră.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+
+export default function GaleriePage() {
+  const projects = [
+    {
+      id: 1,
+      title: "Instalare contor electric",
+      description: "Instalare contor electric pentru șantier de construcții",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_e7e7470b.jpg-xa5yij2MzZRJPL1haNO5jRXrCRTf5r.jpeg",
+    },
+    {
+      id: 2,
+      title: "Lucrări la rețeaua electrică",
+      description: "Lucrări de mentenanță la rețeaua electrică cu autoutilitară cu nacelă",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_170ae220.jpg-6rRLzrks9yHfzg2ec1rKaRHuvd8u81.jpeg",
+    },
+    {
+      id: 3,
+      title: "Tablou electric rezidențial",
+      description: "Instalare tablou electric pentru locuință",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_22251971.jpg-KW52zR9BoX6FsCT306SFhwyHGRvXV7.jpeg",
+    },
+    {
+      id: 4,
+      title: "Contor Delgaz Grid",
+      description: "Montaj contor electric Delgaz Grid pentru locuință",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.13_b7a139da.jpg-mQoicb6ew32kNXsA85dwDANuBJZKGS.jpeg",
+    },
+    {
+      id: 5,
+      title: "Iluminat public",
+      description: "Instalare stâlpi de iluminat în parc",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_719a9687.jpg-evAOsgJ8Mu84OTHOCyZKaLbajCM7oV.jpeg",
+    },
+    {
+      id: 6,
+      title: "Contor electric pe stâlp",
+      description: "Montaj contor DelGaz Grid",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_da824b46.jpg-HikYN3hiXhDV16DoUz6hlCeV5GUErE.jpeg",
+    },
+    {
+      id: 7,
+      title: "Corpuri de iluminat LED",
+      description: "Lămpi moderne pentru iluminat stradal",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_ed697200.jpg-hZp6A8rP8a1E2DLnHKWY0yOFqF28Vq.jpeg",
+    },
+    {
+      id: 8,
+      title: "Tablou electric interior",
+      description: "Instalare și conectare tablou electric",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_a4708a9b.jpg-2ierhCa42pLKC9zinN6oFyIbkhp1Fu.jpeg",
+    },
+    {
+      id: 9,
+      title: "Lucrări la rețeaua electrică",
+      description: "Intervenții cu utilaje specializate",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_28695d24.jpg-PkDV029LoElPTlvWrZI5yXgoepBQmJ.jpeg",
+    },
+    {
+      id: 10,
+      title: "Pregătire instalație electrică",
+      description: "Montaj suport și tablou electric",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_2e5e49af.jpg-PQKvmDDNKjops13bzDljt9etTmjulL.jpeg",
+    },
+    {
+      id: 11,
+      title: "Contor electric încorporat",
+      description: "Instalare contor în perete",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_5dd05476.jpg-x97HL4LHJHB9SVxApIQcvIpae4HYIj.jpeg",
+    },
+    {
+      id: 12,
+      title: "Materiale pentru instalații electrice",
+      description: "Pregătire materiale pentru montaj",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.10_17698e8d.jpg-QcfOqDVYyXzq7jSTwvjv97MTuuNvSC.jpeg",
+    },
+  ]
+
+  return (
+    <div className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center mb-8">
+          <Link href="/" className="flex items-center text-blue-600 hover:text-blue-800">
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Înapoi la pagina principală
+          </Link>
+        </div>
+
+        <h1 className="text-3xl font-bold text-blue-800 mb-8">Galerie proiecte</h1>
+        <p className="text-gray-600 mb-8 max-w-3xl">
+          Explorați o selecție din proiectele noastre recente. ElectroAlex oferă servicii complete de instalații
+          electrice pentru clienți rezidențiali și comerciali, inclusiv instalarea contoarelor, iluminat stradal, și
+          lucrări la rețelele electrice.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+            >
+              <div className="relative h-64">
+                <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-lg text-blue-700">{project.title}</h3>
+                <p className="text-gray-600 mt-1">{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+
+export default function ProiectePage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* Top contact bar and Navigation will be added in a layout component */}
+
+      <main className="flex-grow bg-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center mb-8">
+            <Link href="/" className="flex items-center text-blue-600 hover:text-blue-800">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Înapoi la pagina principală
+            </Link>
+          </div>
+
+          <h1 className="text-3xl font-bold text-blue-800 mb-8">Proiectele noastre</h1>
+
+          <div className="space-y-12">
+            {[1, 2, 3].map((project) => (
+              <div key={project} className="border border-gray-200 rounded-lg overflow-hidden shadow-md">
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  <div className="p-6">
+                    <h2 className="text-2xl font-semibold text-blue-700 mb-4">Proiect {project}</h2>
+                    <p className="text-gray-600 mb-4">
+                      Instalație electrică completă pentru o{" "}
+                      {project === 1 ? "casă rezidențială" : project === 2 ? "clădire de birouri" : "hală industrială"}
+                      din {project === 1 ? "Arbore" : project === 2 ? "Suceava" : "Rădăuți"}.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="font-medium">Client:</span>
+                        <span>{project === 1 ? "Rezidențial" : project === 2 ? "Comercial" : "Industrial"}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="font-medium">Locație:</span>
+                        <span>{project === 1 ? "Arbore" : project === 2 ? "Suceava" : "Rădăuți"}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="font-medium">Anul:</span>
+                        <span>{2020 + project}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="font-medium">Durata:</span>
+                        <span>{project * 2} săptămâni</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 p-2">
+                    <Image
+                      src={`/placeholder.svg?height=200&width=300&text=Proiect ${project}.1`}
+                      alt={`Proiect ${project} imagine 1`}
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover rounded"
+                    />
+                    <Image
+                      src={`/placeholder.svg?height=200&width=300&text=Proiect ${project}.2`}
+                      alt={`Proiect ${project} imagine 2`}
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover rounded"
+                    />
+                    <Image
+                      src={`/placeholder.svg?height=200&width=300&text=Proiect ${project}.3`}
+                      alt={`Proiect ${project} imagine 3`}
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover rounded"
+                    />
+                    <Image
+                      src={`/placeholder.svg?height=200&width=300&text=Proiect ${project}.4`}
+                      alt={`Proiect ${project} imagine 4`}
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
+import Image from "next/image"
+import { CheckCircle } from "lucide-react"
+
+export default function ServiciiPage() {
+  return (
+    <div className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold text-blue-800 mb-8 text-center">Serviciile noastre</h1>
+
+        <div className="max-w-5xl mx-auto">
+          <p className="text-gray-700 text-lg text-center mb-12">
+            ElectroAlex oferă o gamă completă de servicii în domeniul instalațiilor electrice, adaptate nevoilor
+            clienților noștri. Cu peste 30 de ani de experiență și autorizare ANRE, garantăm calitatea și siguranța
+            tuturor lucrărilor executate.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-56 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_22251971.jpg-KW52zR9BoX6FsCT306SFhwyHGRvXV7.jpeg"
+                  alt="Instalații electrice rezidențiale"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-blue-700 mb-4">Instalații electrice rezidențiale</h2>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalații electrice pentru case și apartamente</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Modernizarea instalațiilor existente</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalarea sistemelor de iluminat</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalarea prizelor și întrerupătoarelor</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Tablouri electrice</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-56 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_e7e7470b.jpg-xa5yij2MzZRJPL1haNO5jRXrCRTf5r.jpeg"
+                  alt="Branșamente electrice"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-blue-700 mb-4">Branșamente electrice</h2>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Branșamente aeriene și subterane</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Montaj contoare electrice</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Racorduri la rețeaua de distribuție</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Obținere avize și documentație</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Proiectare și execuție</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-56 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_719a9687.jpg-evAOsgJ8Mu84OTHOCyZKaLbajCM7oV.jpeg"
+                  alt="Iluminat public"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-blue-700 mb-4">Iluminat public</h2>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalare stâlpi de iluminat</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Montaj corpuri de iluminat LED</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Modernizare sisteme de iluminat existente</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Mentenanță și service</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Iluminat festiv și decorativ</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-56 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_a4708a9b.jpg-2ierhCa42pLKC9zinN6oFyIbkhp1Fu.jpeg"
+                  alt="Instalații electrice comerciale"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h2 className="text-xl font-semibold text-blue-700 mb-4">Instalații electrice comerciale</h2>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalații pentru spații comerciale</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalații pentru hale industriale</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Tablouri electrice industriale</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Sisteme de protecție la supratensiune</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Instalații de împământare</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="p-6">
+              <h2 className="text-xl font-semibold text-blue-700 mb-4">Magazin de produse electrice</h2>
+              <p className="text-gray-700 mb-4">
+                Pe lângă serviciile de instalații electrice, dispunem și de un magazin fizic în centrul comunei Arbore,
+                unde puteți găsi o gamă variată de produse electrice și accesorii:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Cabluri și conductori</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Prize și întrerupătoare</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Corpuri de iluminat</span>
+                  </li>
+                </ul>
+
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Tablouri electrice</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Siguranțe și automate</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Becuri și tuburi LED</span>
+                  </li>
+                </ul>
+
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Scule și unelte</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Accesorii electrice</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Sisteme de protecție</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Link from "next/link"
+import { Phone, Mail, Menu } from "lucide-react"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "ElectroAlex - Instalații Electrice Profesionale",
+  description: "ElectroAlex Arbore SRL - Peste 30 de ani de experiență în instalații electrice. Autorizați ANRE.",
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="ro">
+      <body className={inter.className}>
+        <div className="bg-blue-600 text-white py-2 px-4">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2" />
+              <span className="text-sm">0770 670 185 / 0744 506 331</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-2" />
+              <span className="text-sm">electroalex@yahoo.com</span>
+            </div>
+          </div>
+        </div>
+
+        <header className="bg-white py-4 px-4 shadow-sm sticky top-0 z-50">
+          <div className="container mx-auto flex justify-between items-center">
+            <Link href="/" className="text-blue-600 font-bold text-2xl">
+              ELECTROALEX
+            </Link>
+            <nav className="hidden md:flex space-x-8">
+              <Link href="/" className="text-gray-800 hover:text-blue-600">
+                Acasă
+              </Link>
+              <Link href="/despre-noi" className="text-gray-800 hover:text-blue-600">
+                Despre noi
+              </Link>
+              <Link href="/servicii" className="text-gray-800 hover:text-blue-600">
+                Servicii
+              </Link>
+              <Link href="/galerie" className="text-gray-800 hover:text-blue-600">
+                Galerie
+              </Link>
+              <Link href="/contact" className="text-gray-800 hover:text-blue-600">
+                Contact
+              </Link>
+            </nav>
+            <div className="md:hidden">
+              <button className="text-blue-900">
+                <Menu className="h-6 w-6" />
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <main>{children}</main>
+
+        <footer className="bg-blue-800 text-white py-8">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-xl font-bold mb-4">ELECTROALEX</h3>
+                <p className="text-blue-200">Instalații electrice profesionale</p>
+                <p className="text-blue-200 mt-2">Autorizați ANRE</p>
+                <p className="text-blue-200 mt-2">Peste 30 de ani de experiență</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Contact</h4>
+                <p className="text-blue-200 mb-1">Telefon: 0770 670 185 / 0744 506 331</p>
+                <p className="text-blue-200 mb-1">Email: electroalex@yahoo.com</p>
+                <p className="text-blue-200">Email: manoilaalex1@gmail.com</p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Adresă</h4>
+                <p className="text-blue-200 mb-3">Electroalex, DN2K, Arbore 727015, Județul Suceava</p>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Electroalex+Arbore+Suceava"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                  >
+                    Google Maps
+                  </a>
+                  <a
+                    href="https://www.waze.com/ul?ll=47.7252%2C25.9244&navigate=yes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                  >
+                    Waze
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-blue-700 mt-8 pt-4 text-center text-blue-300 text-sm">
+              <p>© {new Date().getFullYear()} ElectroAlex Arbore SRL. Toate drepturile rezervate.</p>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+  )
+}
+import Image from "next/image"
+import Link from "next/link"
+import { Phone, Mail, MapPin, Clock, Award, CheckCircle } from "lucide-react"
+
+export default function Home() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section with Logo */}
+      <section className="bg-blue-800 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center mb-8">
+            <div className="bg-white p-6 rounded-full">
+              <h1 className="text-4xl font-bold text-blue-800">ELECTROALEX</h1>
+            </div>
+          </div>
+          <h2 className="text-2xl font-semibold mb-4">ELECTROALEX ARBORE SRL</h2>
+          <p className="text-xl mb-6">Instalații electrice profesionale</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/galerie" className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md">
+              Vezi Galeria
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-md border border-white"
+            >
+              Contactează-ne
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Despre noi</h2>
+            <div className="bg-blue-50 p-8 rounded-lg shadow-md">
+              <h3 className="text-2xl font-semibold text-blue-700 mb-4">
+                Experiență și profesionalism în instalații electrice
+              </h3>
+              <p className="text-gray-700 mb-4">
+                ElectroAlex Arbore este o companie specializată în instalații și branșamente electrice, oferind servicii
+                complete pentru clienți rezidențiali și comerciali din județul Suceava.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Cu o experiență vastă în domeniu, echipa noastră de electricieni calificați asigură lucrări de înaltă
+                calitate, respectând toate normele și standardele în vigoare.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Pe lângă serviciile de instalații electrice, dispunem și de un magazin fizic în centrul comunei Arbore,
+                unde puteți găsi o gamă variată de produse electrice și accesorii.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="flex items-start">
+                  <Clock className="h-10 w-10 text-blue-600 mr-4 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Peste 30 de ani de experiență</h4>
+                    <p className="text-gray-600">
+                      Oferim servicii de calitate bazate pe experiența acumulată de-a lungul anilor.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Award className="h-10 w-10 text-blue-600 mr-4 flex-shrink-0" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-blue-700 mb-2">Autorizați ANRE</h4>
+                    <p className="text-gray-600">
+                      Suntem autorizați de Autoritatea Națională de Reglementare în Domeniul Energiei.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-800 mb-12 text-center">Serviciile noastre</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-48 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_22251971.jpg-KW52zR9BoX6FsCT306SFhwyHGRvXV7.jpeg"
+                  alt="Instalații electrice"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-blue-700 mb-3">Instalații electrice</h3>
+                <p className="text-gray-600 mb-4">
+                  Realizăm instalații electrice complete pentru locuințe, spații comerciale și industriale.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Instalații interioare</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Instalații exterioare</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Tablouri electrice</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-48 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_e7e7470b.jpg-xa5yij2MzZRJPL1haNO5jRXrCRTf5r.jpeg"
+                  alt="Branșamente electrice"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-blue-700 mb-3">Branșamente electrice</h3>
+                <p className="text-gray-600 mb-4">
+                  Executăm branșamente electrice și racorduri la rețeaua de distribuție.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Montaj contoare</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Racorduri la rețea</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Avize și documentație</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-48 relative">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_719a9687.jpg-evAOsgJ8Mu84OTHOCyZKaLbajCM7oV.jpeg"
+                  alt="Iluminat public"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-blue-700 mb-3">Iluminat public</h3>
+                <p className="text-gray-600 mb-4">Instalăm și întreținem sisteme de iluminat public și stradal.</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Corpuri LED moderne</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Stâlpi de iluminat</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-gray-700">Mentenanță periodică</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Preview */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Galerie proiecte</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.13_b7a139da.jpg-mQoicb6ew32kNXsA85dwDANuBJZKGS.jpeg"
+                alt="Proiect 1"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_a4708a9b.jpg-2ierhCa42pLKC9zinN6oFyIbkhp1Fu.jpeg"
+                alt="Proiect 2"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.11_28695d24.jpg-PkDV029LoElPTlvWrZI5yXgoepBQmJ.jpeg"
+                alt="Proiect 3"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-07%20at%2016.04.12_ed697200.jpg-hZp6A8rP8a1E2DLnHKWY0yOFqF28Vq.jpeg"
+                alt="Proiect 4"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/galerie"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md inline-block"
+            >
+              Vezi toate proiectele
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">Contact</h2>
+          <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-blue-700 mb-4">Informații de contact</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <Phone className="h-5 w-5 text-blue-600 mr-3 mt-1" />
+                    <div>
+                      <p className="font-medium">Telefon:</p>
+                      <p>0770 670 185 / 0744 506 331</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Mail className="h-5 w-5 text-blue-600 mr-3 mt-1" />
+                    <div>
+                      <p className="font-medium">Email:</p>
+                      <p>electroalex@yahoo.com</p>
+                      <p>manoilaalex1@gmail.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-1" />
+                    <div>
+                      <p className="font-medium">Adresă:</p>
+                      <p className="mb-2">Electroalex, DN2K, Arbore 727015, Județul Suceava</p>
+                      <div className="flex space-x-3 mt-2">
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=Electroalex+Arbore+Suceava"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                        >
+                          Google Maps
+                        </a>
+                        <a
+                          href="https://www.waze.com/ul?ll=47.7252%2C25.9244&navigate=yes"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                        >
+                          Waze
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-blue-700 mb-4">Trimite-ne un mesaj</h3>
+                <form className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      Nume
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                      Mesaj
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    ></textarea>
+                  </div>
+                  <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                    Trimite mesajul
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
